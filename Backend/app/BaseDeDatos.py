@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 load_dotenv()
 
 # Cargar la URL de la base de datos desde el archivo .env
-db_url = os.getenv("DATABASE_URL")
+db_url = os.getenv("DATABASE_URL", "sqlite:///./monsort.db")
 
 # Crear la conexión a la base de datos
 engine = create_engine(db_url)
